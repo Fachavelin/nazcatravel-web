@@ -1,11 +1,21 @@
 import { Layout } from '@/components/layout';
 import { AboutUsCard } from '@/components/pages/aboutUs';
+import { BackGroundImage } from '@/components/shared';
+import { navButtom } from '@/interfaces';
 import { NextPage } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const AboutUsPage: NextPage = () => {
+  const navButtoms: navButtom[] = [
+    {
+      title: 'Contactanos',
+      url: '/contact',
+    },
+  ];
+
   return (
-    <Layout title={''} description={''}>
+    <Layout title={'Nazca Travel | Nosotros'} description={''}>
       <div className='min-h-screen'>
         <div className='grid sm:grid-cols-3 max-w-5xl mx-auto pt-12'>
           <div className='sm:col-span-1'>
@@ -90,6 +100,42 @@ export const AboutUsPage: NextPage = () => {
             </div>
           </div>
         </div>
+
+        <BackGroundImage
+          imgUrl={
+            'https://cdn.pixabay.com/photo/2022/12/06/11/31/trees-7638777_1280.jpg'
+          }
+          text={'Comunicate con nosotros y resolveremos tus dudas'}
+          imgPosition={'center'}
+          navButtoms={navButtoms}
+        />
+
+        {/* <div className='w-full h-100v md:h-80v max-w-screen-2xl mx-auto  flex items-center justify-center relative'>
+          <Image
+            src={
+              'https://cdn.pixabay.com/photo/2022/12/06/11/31/trees-7638777_1280.jpg'
+            }
+            alt={''}
+            fill
+            style={{
+              objectFit: 'cover',
+              objectPosition: 'top',
+            }}
+          />
+          <div className='max-w-3xl absolute'>
+            <h1 className='text-white text-center text-5xl mb-9'>
+              Comunicate con nosotros y resolveremos tus dudas
+            </h1>
+            <div className='flex justify-center'>
+              <Link
+                href='/contact'
+                className='bg-white text-xl py-3 px-3 rounded-md transition  hover:text-blue-500'
+              >
+                Contactanos
+              </Link>
+            </div>
+          </div>
+        </div> */}
       </div>
     </Layout>
   );

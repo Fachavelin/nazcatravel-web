@@ -23,7 +23,7 @@ export const Navbar: FC = () => {
               <Link
                 key={item.url}
                 href={item.url}
-                className='text-sm font-semibold text-blue-500 hover:text-blue-600 hover:scale-105 px-3 py-2 rounded-md'
+                className='text-sm font-semibold text-blue-500 hover:text-blue-600 transition px-3 py-2 rounded-md'
               >
                 {item.title}
               </Link>
@@ -56,7 +56,7 @@ export const Navbar: FC = () => {
                 <Link
                   key={item.url}
                   href={item.url}
-                  className='text-base font-bold text-blue-500 hover:text-blue-600 block px-3 py-2 rounded-md'
+                  className='text-base font-bold text-blue-500 hover:text-blue-600 transition block px-3 py-2 rounded-md'
                 >
                   {item.title}
                 </Link>

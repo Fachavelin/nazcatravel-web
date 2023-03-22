@@ -16,7 +16,7 @@ export const Services: FC = () => {
               sequi!
             </p>
 
-            <button className='w-full bg-blue-500 hover:bg-blue-600 transition shadow-blue-600 shadow-2xl text-white py-2 rounded-lg text-xl'>
+            <button className='w-full bg-blue-500 hover:bg-blue-600 transition hover:shadow-blue-600 shadow-2xl text-white py-2 rounded-lg text-xl'>
               Ver mas
             </button>
           </div>
@@ -61,7 +61,7 @@ export const Services: FC = () => {
               sequi!
             </p>
 
-            <button className='w-full bg-blue-500 hover:bg-blue-600 transition shadow-blue-600 shadow-2xl text-white py-2 rounded-lg text-xl'>
+            <button className='w-full bg-blue-500 hover:bg-blue-600 transition hover:shadow-blue-600 shadow-2xl text-white py-2 rounded-lg text-xl'>
               Ver mas
             </button>
           </div>
