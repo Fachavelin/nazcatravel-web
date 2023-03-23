@@ -20,6 +20,7 @@ export const Hero: FC = () => {
       }
       text={'Explora las maravillas de las Islas Galápagos con nosotros'}
       navButtoms={navButtoms}
+      isImageAtTop
     />
   );
 };

@@ -8,6 +8,7 @@ interface Props {
   imgPosition?: string;
   text: string;
   navButtoms?: navButtom[];
+  isImageAtTop?: boolean;
 }
 
 export const BackGroundImage: FC<Props> = ({
@@ -15,9 +16,14 @@ export const BackGroundImage: FC<Props> = ({
   imgPosition,
   text,
   navButtoms,
+  isImageAtTop = false,
 }) => {
   return (
-    <div className='w-full h-100v md:h-80v max-w-screen-2xl mx-auto  flex items-center justify-center relative'>
+    <div
+      className={`w-full h-100v max-w-screen-2xl mx-auto  flex items-center justify-center relative
+      ${isImageAtTop ? 'md:h-80v' : 'md:h-70v'}
+      `}
+    >
       <Image
         src={imgUrl}
         alt={''}
