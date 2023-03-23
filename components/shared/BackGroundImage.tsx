@@ -40,7 +40,10 @@ export const BackGroundImage: FC<Props> = ({
         >
           {text}
         </h1>
-        <div className='flex justify-center gap-3' data-aos='fade-up'>
+        <div
+          className='flex flex-col sm:flex-row justify-center gap-3'
+          data-aos='fade-up'
+        >
           {navButtoms &&
             navButtoms.map((item, key) => (
               <Link
@@ -50,7 +53,7 @@ export const BackGroundImage: FC<Props> = ({
                   key % 2 != 0
                     ? 'bg-blue-500 hover:bg-blue-600 text-white text-xl py-3 px-3 rounded-md transition'
                     : 'bg-white text-xl py-3 px-3 rounded-md transition  hover:text-blue-500'
-                }  text-xl py-3 px-3 rounded-md transition`}
+                } text-center text-xl py-3 px-3 rounded-md transition mx-auto sm:mx-0`}
               >
                 {item.title}
               </Link>

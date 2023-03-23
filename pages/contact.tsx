@@ -16,10 +16,16 @@ const ContactPage: NextPage = () => {
         isImageAtTop
       />
       <div className='max-w-4xl mx-auto mb-16'>
-        <h1 className='text-2xl text-gray-800 text-center font-semibold py-10'>
+        <h1
+          className='text-2xl text-gray-800 text-center font-semibold py-10 px-4 sm:px-0'
+          data-aos='fade-up'
+        >
           Envianos un mensaje y con gusto uno de nuestros agentes te responderá
         </h1>
-        <div className='grid sm:grid-cols-12 border mb-10 mx-4'>
+        <div
+          className='grid sm:grid-cols-12 border mb-10 mx-4'
+          data-aos='fade-down'
+        >
           {/* TODO:Contado */}
           <div className='bg-blue-500 sm:col-span-4 text-white p-6 flex flex-col gap-4'>
             <p className='text-center text-xl font-semibold'>

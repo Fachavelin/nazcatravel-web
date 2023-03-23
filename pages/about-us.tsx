@@ -33,10 +33,16 @@ export const AboutUsPage: NextPage = () => {
             </div>
           </div>
           <div className='sm:col-span-2 px-8'>
-            <h1 className='text-3xl font-semibold pt-4 text-center sm:text-left sm:pt-20'>
+            <h1
+              className='text-3xl font-semibold pt-4 text-center sm:text-left sm:pt-20'
+              data-aos='fade-down'
+            >
               Sobre nosotros
             </h1>
-            <p className='text-gray-800 text-lg pb-6 sm:pb-0 pt-5 sm:pt-12'>
+            <p
+              className='text-gray-800 text-lg pb-6 sm:pb-0 pt-5 sm:pt-12'
+              data-aos='fade-left'
+            >
               Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
               facere maxime illum aliquid dignissimos optio! Repudiandae vitae
               cumque culpa aliquam exercitationem, nisi quae, voluptatum ea ad
@@ -46,7 +52,10 @@ export const AboutUsPage: NextPage = () => {
         </div>
         <div className='bg-sky-100 py-16'>
           <div className='max-w-6xl mx-auto'>
-            <h1 className='text-center text-3xl font-semibold pb-5'>
+            <h1
+              className='text-center text-3xl font-semibold pb-5'
+              data-aos='fade-right'
+            >
               Nuestros valores
             </h1>
             <div className='grid md:grid-cols-3 mx-4 gap-4'>
@@ -56,6 +65,7 @@ export const AboutUsPage: NextPage = () => {
                 text={
                   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, sed sint quos nihil quae dolorum consequatur aut nobis laudantium repudiandae autem odit odio nulla neque ad tenetur quibusdam ab nesciunt!'
                 }
+                dataAosDuration={600}
               />
               <AboutUsCard
                 title={'2'}
@@ -63,6 +73,7 @@ export const AboutUsPage: NextPage = () => {
                 text={
                   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, sed sint quos nihil quae dolorum consequatur aut nobis laudantium repudiandae autem odit odio nulla neque ad tenetur quibusdam ab nesciunt!'
                 }
+                dataAosDuration={900}
               />
               <AboutUsCard
                 title={'3'}
@@ -70,13 +81,14 @@ export const AboutUsPage: NextPage = () => {
                 text={
                   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, sed sint quos nihil quae dolorum consequatur aut nobis laudantium repudiandae autem odit odio nulla neque ad tenetur quibusdam ab nesciunt!'
                 }
+                dataAosDuration={1200}
               />
             </div>
           </div>
         </div>
         <div className='bg-white'>
           <div className='grid sm:grid-cols-2 max-w-6xl mx-auto py-10 sm:py-20 gap-6'>
-            <div className='mx-4'>
+            <div className='mx-4' data-aos='fade-right'>
               <h1 className='text-center text-3xl font-semibold pb-1'>
                 Nuestra vision
               </h1>
@@ -87,7 +99,7 @@ export const AboutUsPage: NextPage = () => {
                 ipsam sed? Eius, facere.
               </p>
             </div>
-            <div className='mx-4'>
+            <div className='mx-4' data-aos='fade-left'>
               <h1 className='text-center text-3xl font-semibold pb-1'>
                 Nuestra vision
               </h1>

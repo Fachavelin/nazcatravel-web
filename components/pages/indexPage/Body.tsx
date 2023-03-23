@@ -7,9 +7,9 @@ export const Body: FC = () => (
       Lorem ipsum dolor sit amet
     </p>
     <div className='grid mx-4 sm:mx-0 sm:grid-cols-3 sm:gap-10'>
-      <BodyCard dataAosDuration={1000} />
-      <BodyCard dataAosDuration={1300} />
-      <BodyCard dataAosDuration={1600} />
+      <BodyCard dataAosDuration={700} />
+      <BodyCard dataAosDuration={900} />
+      <BodyCard dataAosDuration={1200} />
     </div>
   </div>
 );

@@ -6,16 +6,16 @@ import Link from 'next/link';
 export const Footer: FC = () => {
   return (
     <div className=' w-full bg-blue-500 shadow z-50 py-5'>
-      <div className='max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 flex justify-around'>
-        <div className='max-w-xs'>
+      <div className='max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 grid gap-5 sm:grid-cols-3'>
+        <div className='max-w-xs mx-auto'>
           <div className='flex justify-center pb-4'>
             <Image src='/logo.png' alt={''} width={220} height={220} />
           </div>
-          <p className='text-white text-justify pb-4'>
+          <p className='text-white text-center pb-4'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
             doloribus quas, exercitationem nihil eius nam
           </p>
-          <p className='text-white text-justify'>
+          <p className='text-white text-center'>
             Todos los derechos reservados © 2023 | {'Desarrollado por '}
             <a
               href='https://www.logicielapplab.com/'
@@ -36,7 +36,7 @@ export const Footer: FC = () => {
             <Link
               key={item.url}
               href={item.url}
-              className='text-sm font-semibold text-white hover:text-blue-100 cursor-pointer transition'
+              className='text-sm font-semibold text-white hover:text-blue-100 cursor-pointer transition mx-auto mx-auto'
             >
               {item.title}
             </Link>
@@ -48,7 +48,7 @@ export const Footer: FC = () => {
           </p>
 
           <a
-            className='text-sm font-semibold text-white hover:text-blue-100 cursor-pointer transition'
+            className='text-sm font-semibold text-white hover:text-blue-100 cursor-pointer transition mx-auto'
             href='https://www.facebook.com/mafercita.arevalo'
             target='_blank'
             rel='noopener noreferrer'
@@ -56,7 +56,7 @@ export const Footer: FC = () => {
             Facebook
           </a>
           <a
-            className='text-sm font-semibold text-white hover:text-blue-100 cursor-pointer transition'
+            className='text-sm font-semibold text-white hover:text-blue-100 cursor-pointer transition mx-auto'
             href='https://www.facebook.com/mafercita.arevalo'
             target='_blank'
             rel='noopener noreferrer'
@@ -64,7 +64,7 @@ export const Footer: FC = () => {
             Instragram
           </a>
           <a
-            className='text-sm font-semibold text-white hover:text-blue-100 cursor-pointer transition'
+            className='text-sm font-semibold text-white hover:text-blue-100 cursor-pointer transition mx-auto'
             href='https://www.facebook.com/mafercita.arevalo'
             target='_blank'
             rel='noopener noreferrer'
