@@ -8,21 +8,29 @@ export const Services: FC = () => {
       <div className='grid md:grid-cols-2 max-w-5xl md:h-70v mx-auto my-8'>
         <div className='flex items-center justify-center my-6 md:mb-0 px-6'>
           <div className='px-4'>
-            <p className='text-left text-4xl mb-5'>Lorem ipsum</p>
-            <p className='text-justify te xt-xl mb-5 text-gray-800'>
+            <p className='text-left text-4xl mb-5' data-aos='fade-right'>
+              Lorem ipsum
+            </p>
+            <p
+              className='text-justify te xt-xl mb-5 text-gray-800'
+              data-aos='fade-left'
+            >
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste cum
               deleniti hic in qui nobis, iure enim dicta officiis libero
               tempora, fugiat a eligendi pariatur. Assumenda delectus rem illum
               sequi!
             </p>
 
-            <button className='w-full bg-blue-500 hover:bg-blue-600 transition hover:shadow-blue-600 shadow-2xl text-white py-2 rounded-lg text-xl'>
+            <button
+              className='w-full bg-blue-500 hover:bg-blue-600 transition hover:shadow-blue-600 shadow-2xl text-white py-2 rounded-lg text-xl'
+              data-aos='fade-right'
+            >
               Ver mas
             </button>
           </div>
         </div>
-        <div className='bg-black row-start-1 md:row-auto'>
-          <div className='relative h-40v md:h-70v w-full'>
+        <div className=' row-start-1 md:row-auto'>
+          <div className='relative h-40v md:h-70v w-full' data-aos='fade-up'>
             <Image
               src='https://res.cloudinary.com/dbpb5pque/image/upload/v1679267085/sea-turtle-2547084_1920_xpaomh.jpg'
               alt={'Image'}
@@ -33,7 +41,7 @@ export const Services: FC = () => {
         </div>
       </div>
       <div className='grid md:grid-cols-2 max-w-screen-2xl mx-auto my-14'>
-        <div className='grid grid-cols-6'>
+        <div className='grid grid-cols-6' data-aos='fade-up'>
           <div className='relative h-30v md:h-50v col-span-4 translate-x-7 sm:translate-x-16'>
             <Image
               src='https://res.cloudinary.com/dbpb5pque/image/upload/v1679267085/sea-turtle-2547084_1920_xpaomh.jpg'
@@ -53,15 +61,26 @@ export const Services: FC = () => {
         </div>
         <div className='flex items-center  my-6 md:mb-0'>
           <div className='px-4 max-w-md'>
-            <p className='text-left text-4xl mb-5'>Lorem ipsum</p>
-            <p className='text-justify te xt-xl mb-5 text-gray-800'>
+            <p
+              className='text-left text-4xl mb-5 pt-6 sm:pt-0'
+              data-aos='fade-left'
+            >
+              Lorem ipsum
+            </p>
+            <p
+              className='text-justify te xt-xl mb-5 text-gray-800'
+              data-aos='fade-right'
+            >
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste cum
               deleniti hic in qui nobis, iure enim dicta officiis libero
               tempora, fugiat a eligendi pariatur. Assumenda delectus rem illum
               sequi!
             </p>
 
-            <button className='w-full bg-blue-500 hover:bg-blue-600 transition hover:shadow-blue-600 shadow-2xl text-white py-2 rounded-lg text-xl'>
+            <button
+              className='w-full bg-blue-500 hover:bg-blue-600 transition hover:shadow-blue-600 shadow-2xl text-white py-2 rounded-lg text-xl'
+              data-aos='fade-left'
+            >
               Ver mas
             </button>
           </div>

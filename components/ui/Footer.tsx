@@ -16,7 +16,15 @@ export const Footer: FC = () => {
             doloribus quas, exercitationem nihil eius nam
           </p>
           <p className='text-white text-justify'>
-            © 2023 | Todos los derechos reservados
+            Todos los derechos reservados © 2023 | {'Desarrollado por '}
+            <a
+              href='https://www.logicielapplab.com/'
+              target={'_blank'}
+              rel='noopener noreferrer'
+              className='cursor-pointer font-bold'
+            >
+              Logiciel Applab
+            </a>
           </p>
         </div>
 

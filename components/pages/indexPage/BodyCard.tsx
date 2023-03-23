@@ -1,9 +1,17 @@
 import { FC } from 'react';
 import Image from 'next/image';
 
-export const BodyCard: FC = () => {
+interface Props {
+  dataAosDuration: number;
+}
+
+export const BodyCard: FC<Props> = ({ dataAosDuration = 1000 }) => {
   return (
-    <div className='flex justify-center items-center'>
+    <div
+      className='flex justify-center items-center'
+      data-aos='fade-up'
+      data-aos-duration={dataAosDuration}
+    >
       <div className='grid'>
         <div className='relative h-72 w-full'>
           <Image

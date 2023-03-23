@@ -34,11 +34,17 @@ export const BackGroundImage: FC<Props> = ({
         }}
       />
       <div className='max-w-3xl absolute'>
-        <h1 className='text-white text-center text-5xl mb-9'>{text}</h1>
-        <div className='flex justify-center gap-3'>
+        <h1
+          className='text-white text-center text-5xl mb-9'
+          data-aos='fade-down'
+        >
+          {text}
+        </h1>
+        <div className='flex justify-center gap-3' data-aos='fade-up'>
           {navButtoms &&
             navButtoms.map((item, key) => (
               <Link
+                key={item.url}
                 href={item.url}
                 className={`${
                   key % 2 != 0
