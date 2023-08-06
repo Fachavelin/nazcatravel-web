@@ -2,14 +2,17 @@ import { Layout } from '@/components/layout';
 import { AboutUsCard } from '@/components/pages/aboutUs';
 import { BackGroundImage } from '@/components/shared';
 import { navButtom } from '@/interfaces';
-import { NextPage } from 'next';
+import { GetStaticPropsContext, NextPage } from 'next';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export const AboutUsPage: NextPage = () => {
+  const t = useTranslations('aboutUs');
+
   const navButtoms: navButtom[] = [
     {
-      title: 'Contactanos',
+      title: t('contact_us_button'),
       url: '/contact',
     },
   ];
@@ -21,9 +24,7 @@ export const AboutUsPage: NextPage = () => {
           <div className='sm:col-span-1'>
             <div className='relative w-full h-96 sm:translate-y-12 sm:shadow-2xl'>
               <Image
-                src={
-                  'https://res.cloudinary.com/dbpb5pque/image/upload/v1679343065/computer-2846160_1280_ahjvjs.jpg'
-                }
+                src={'https://res.cloudinary.com/dbpb5pque/image/upload/v1679343065/computer-2846160_1280_ahjvjs.jpg'}
                 alt={''}
                 fill
                 style={{
@@ -33,55 +34,40 @@ export const AboutUsPage: NextPage = () => {
             </div>
           </div>
           <div className='sm:col-span-2 px-8'>
-            <h1
-              className='text-3xl font-semibold pt-4 text-center sm:text-left sm:pt-20'
-              data-aos='fade-down'
-            >
-              Sobre nosotros
+            <h1 className='text-3xl font-semibold pt-4 text-center sm:text-left sm:pt-20' data-aos='fade-down'>
+              {t('title')}
             </h1>
-            <p
-              className='text-gray-800 text-lg pb-6 sm:pb-0 pt-5 sm:pt-12'
-              data-aos='fade-left'
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
-              facere maxime illum aliquid dignissimos optio! Repudiandae vitae
-              cumque culpa aliquam exercitationem, nisi quae, voluptatum ea ad
-              neque quos deserunt alias!
+            <p className='text-gray-800 text-lg pb-6 sm:pb-0 pt-5 sm:pt-12' data-aos='fade-left'>
+              {t('text')}
             </p>
           </div>
         </div>
         <div className='bg-sky-100 py-16'>
           <div className='max-w-6xl mx-auto'>
-            <h1
-              className='text-center text-3xl font-semibold pb-5'
-              data-aos='fade-right'
-            >
-              Nuestros valores
+            <h1 className='text-center text-3xl font-semibold pb-5' data-aos='fade-right'>
+              {t('ourValues')}
             </h1>
             <div className='grid md:grid-cols-3 mx-4 gap-4'>
               <AboutUsCard
                 title={'1'}
-                subTitle={'Responsabilidad'}
-                text={
-                  'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, sed sint quos nihil quae dolorum consequatur aut nobis laudantium repudiandae autem odit odio nulla neque ad tenetur quibusdam ab nesciunt!'
-                }
+                subTitle={t('responsibility')}
+                text={t('responsibility_text')}
                 dataAosDuration={600}
+                imageUrl='https://res.cloudinary.com/dbpb5pque/image/upload/v1691282715/Nazcatravel/cadena-de-valor_eypuxq.png'
               />
               <AboutUsCard
                 title={'2'}
-                subTitle={'Honestidad'}
-                text={
-                  'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, sed sint quos nihil quae dolorum consequatur aut nobis laudantium repudiandae autem odit odio nulla neque ad tenetur quibusdam ab nesciunt!'
-                }
+                subTitle={t('honesty')}
+                text={t('honesty_text')}
                 dataAosDuration={900}
+                imageUrl='https://res.cloudinary.com/dbpb5pque/image/upload/v1691282715/Nazcatravel/equilibrar_ujry06.png'
               />
               <AboutUsCard
                 title={'3'}
-                subTitle={'Respeto'}
-                text={
-                  'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, sed sint quos nihil quae dolorum consequatur aut nobis laudantium repudiandae autem odit odio nulla neque ad tenetur quibusdam ab nesciunt!'
-                }
+                subTitle={t('respect')}
+                text={t('respect_text')}
                 dataAosDuration={1200}
+                imageUrl='https://res.cloudinary.com/dbpb5pque/image/upload/v1691282715/Nazcatravel/propuesta-de-valor_d8jufn.png'
               />
             </div>
           </div>
@@ -89,68 +75,33 @@ export const AboutUsPage: NextPage = () => {
         <div className='bg-white'>
           <div className='grid sm:grid-cols-2 max-w-6xl mx-auto py-10 sm:py-20 gap-6'>
             <div className='mx-4' data-aos='fade-right'>
-              <h1 className='text-center text-3xl font-semibold pb-1'>
-                Nuestra vision
-              </h1>
-              <p className='text-gray-800 text-lg text-justify'>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Officia tempora qui, nisi iure natus nobis esse, aliquam aut
-                officiis dolorem quas rem distinctio laboriosam commodi, modi
-                ipsam sed? Eius, facere.
-              </p>
+              <h1 className='text-center text-3xl font-semibold pb-1'>{t('vision')}</h1>
+              <p className='text-gray-800 text-lg text-justify'>{t('vision_text')}</p>
             </div>
             <div className='mx-4' data-aos='fade-left'>
-              <h1 className='text-center text-3xl font-semibold pb-1'>
-                Nuestra vision
-              </h1>
-              <p className='text-gray-800 text-lg text-justify'>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Officia tempora qui, nisi iure natus nobis esse, aliquam aut
-                officiis dolorem quas rem distinctio laboriosam commodi, modi
-                ipsam sed? Eius, facere.
-              </p>
+              <h1 className='text-center text-3xl font-semibold pb-1'>{t('mission')}</h1>
+              <p className='text-gray-800 text-lg text-justify'>{t('mission_text')}</p>
             </div>
           </div>
         </div>
 
         <BackGroundImage
-          imgUrl={
-            'https://cdn.pixabay.com/photo/2022/12/06/11/31/trees-7638777_1280.jpg'
-          }
-          text={'Comunicate con nosotros y resolveremos tus dudas'}
+          imgUrl={'https://cdn.pixabay.com/photo/2022/12/06/11/31/trees-7638777_1280.jpg'}
+          text={t('contact_us')}
           imgPosition={'center'}
           navButtoms={navButtoms}
         />
-
-        {/* <div className='w-full h-100v md:h-80v max-w-screen-2xl mx-auto  flex items-center justify-center relative'>
-          <Image
-            src={
-              'https://cdn.pixabay.com/photo/2022/12/06/11/31/trees-7638777_1280.jpg'
-            }
-            alt={''}
-            fill
-            style={{
-              objectFit: 'cover',
-              objectPosition: 'top',
-            }}
-          />
-          <div className='max-w-3xl absolute'>
-            <h1 className='text-white text-center text-5xl mb-9'>
-              Comunicate con nosotros y resolveremos tus dudas
-            </h1>
-            <div className='flex justify-center'>
-              <Link
-                href='/contact'
-                className='bg-white text-xl py-3 px-3 rounded-md transition  hover:text-blue-500'
-              >
-                Contactanos
-              </Link>
-            </div>
-          </div>
-        </div> */}
       </div>
     </Layout>
   );
 };
+
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+  return {
+    props: {
+      messages: (await import(`@/messages/${locale}.json`)).default,
+    },
+  };
+}
 
 export default AboutUsPage;

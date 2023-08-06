@@ -1,8 +1,10 @@
 import { FC, useState } from 'react';
 import { XMarkIcon, Bars3BottomLeftIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
-import { linkValues } from './NavLinks';
 import Link from 'next/link';
+import { useLocale, useTranslations } from 'next-intl';
+import { Field, Formik, Form } from 'formik';
+import { Router, useRouter } from 'next/router';
 
 export const Navbar: FC = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -10,6 +12,48 @@ export const Navbar: FC = () => {
   const toggleMobileNav = () => {
     setIsMobileNavOpen(!isMobileNavOpen);
   };
+
+  const t = useTranslations('Navbar');
+
+  const linkValues = [
+    {
+      title: t('index'),
+      url: '/',
+    },
+    {
+      title: t('about_us'),
+      url: '/about-us',
+    },
+    {
+      title: t('contact'),
+      url: '/contact',
+    },
+    {
+      title: t('tours'),
+      url: '/tours',
+    },
+    {
+      title: t('services'),
+      url: '/services',
+    },
+  ];
+
+  const router = useRouter();
+
+  const defaultLocale = useLocale();
+
+  const locales = [
+    {
+      name: 'Es',
+      value: 'es',
+    },
+    {
+      name: 'En',
+      value: 'en',
+    },
+  ];
+
+  console.log(defaultLocale);
 
   return (
     <nav className=' w-full bg-white shadow fixed z-50'>
@@ -28,6 +72,33 @@ export const Navbar: FC = () => {
                 {item.title}
               </Link>
             ))}
+            <Formik
+              initialValues={{ locale: defaultLocale }}
+              onSubmit={({ locale }) => {
+                router.push(router.asPath, router.asPath, { locale: locale });
+                //router.push(`${locale}${router.asPath}`, `${locale}${router.asPath}`, { locale: false });
+              }}
+            >
+              {({ handleSubmit, handleChange }) => (
+                <Form>
+                  <Field
+                    as='select'
+                    name='locale'
+                    defaultValue={defaultLocale}
+                    onChange={(e: any) => {
+                      handleChange(e);
+                      handleSubmit();
+                    }}
+                  >
+                    {locales.map((l) => (
+                      <option key={l.value} value={l.value} className='capitalize'>
+                        {l.name}
+                      </option>
+                    ))}
+                  </Field>
+                </Form>
+              )}
+            </Formik>
           </div>
           <div className='flex md:hidden'>
             <button
@@ -41,10 +112,7 @@ export const Navbar: FC = () => {
               {isMobileNavOpen ? (
                 <XMarkIcon className='block h-6 w-6' aria-hidden='true' />
               ) : (
-                <Bars3BottomLeftIcon
-                  className='block h-6 w-6'
-                  aria-hidden='true'
-                />
+                <Bars3BottomLeftIcon className='block h-6 w-6' aria-hidden='true' />
               )}
             </button>
           </div>

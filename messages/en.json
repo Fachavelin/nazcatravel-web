@@ -1,0 +1,55 @@
+{
+  "Navbar": {
+    "index": "Index",
+    "about_us": "About Us",
+    "contact": "Contact",
+    "tours": "Tours",
+    "services": "Services",
+    "social_network": "Social Network",
+    "router": "Pages",
+    "copyright": "All rights reserved",
+    "developed_by": "Developed by",
+    "slogan": ""
+  },
+
+  "Index": {
+    "title": "Nazca Travel | Home",
+    "description": "Welcome to our travel agency, where we make your travel dreams come true. We are a company dedicated to providing unique and memorable experiences to our clients. We offer a wide range of travel services, from planning and booking flights, hotels, and tour packages, to organizing excursions and activities at your destination.",
+    "Hero": {
+      "text": "Explore the wonders of the Galapagos Islands with us",
+      "button_title_1": "Our Packages",
+      "button_title_2": "Our Services"
+    },
+    "Services": {
+      "title": "Discover Our Services",
+      "text": "At our agency, we take pride in offering unforgettable and personalized experiences for all travelers who wish to explore and discover the incredible biodiversity and natural beauty of the Galapagos Islands. Our goal is to provide exceptional service and turn each trip into a unique and exciting adventure.",
+      "button_text": "Learn more"
+    },
+    "Tours": {
+      "title": "Explore Our Tours",
+      "text": "If you seek an authentic, enriching, and awe-inspiring travel experience, we invite you to join us on an unparalleled adventure in the Galapagos Islands. Let us be your guides as you discover the natural wonder of this island paradise. We welcome you with open arms to offer you an unforgettable experience in the Galapagos Islands.",
+      "button_text": "Learn more"
+    },
+    "Slider": {
+      "title": "Top Selling Tours"
+    }
+  },
+
+  "aboutUs": {
+    "title": "About Us",
+    "text": "We are pleased to introduce Nazca Travel, a team of young dreamers who have come together with passion and determination to make our dreams and those of our clients come true. In a world full of possibilities and challenges, we have decided to take a step forward to offer innovative and creative solutions in the world of travel agencies.",
+    "ourValues": "Our Values",
+    "responsibility": "Responsibility",
+    "responsibility_text": "Responsibility",
+    "honesty": "Honesty",
+    "honesty_text": "Honesty",
+    "respect": "Respect",
+    "respect_text": "Respect",
+    "mission": "Our Mission",
+    "mission_text": "Our mission is to make our clients' dreams come true by offering high-quality and personalized services that inspire and connect with the audience in a meaningful way.",
+    "vision": "Our Vision",
+    "vision_text": "At Nazca Travel, our vision is to be a benchmark in the tourism industry, standing out for our creativity, innovation, and cutting-edge solutions that generate a positive impact on society.",
+    "contact_us": "Contact us and we will resolve your doubts",
+    "contact_us_button": "Contact us"
+  }
+}

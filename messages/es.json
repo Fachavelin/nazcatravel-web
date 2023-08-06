@@ -1,0 +1,55 @@
+{
+  "Navbar": {
+    "index": "Inicio",
+    "about_us": "Nosotros",
+    "contact": "Contacto",
+    "tours": "Tours",
+    "services": "Servicios",
+    "social_network": "Redes sociales",
+    "router": "Navegación",
+    "copyright": "Todos los derechos reservados",
+    "developed_by": "Desarrollado por",
+    "slogan": ""
+  },
+
+  "Index": {
+    "title": "Nazca Travel | Inicio",
+    "description": "Bienvenido/a a nuestra agencia de viajes, donde hacemos realidad tus sueños de viajar. Somos una empresa dedicada a brindar experiencias únicas y memorables a nuestros clientes. Ofrecemos una amplia gama de servicios de viajes, desde la planificación y reserva de vuelos, hoteles y paquetes turísticos, hasta la organización de excursiones y actividades en destino.",
+    "Hero": {
+      "text": "Explora las maravillas de las Islas Galápagos con nosotros",
+      "button_title_1": "Nuestros Paquetes",
+      "button_title_2": "Nuestros Servicios"
+    },
+    "Services": {
+      "title": "Conoce Nuestros Servicios",
+      "text": "En nuestra agencia, nos enorgullecemos de ofrecer experiencias inolvidables y personalizadas para todos los viajeros que deseen explorar y descubrir la increíble biodiversidad y belleza natural de las Islas Galápagos. Nuestro objetivo es brindar un servicio excepcional y convertir cada viaje en una aventura única y emocionante.",
+      "button_text": "Ver más"
+    },
+    "Tours": {
+      "title": "Explora Nuestros Tours",
+      "text": "Si buscas una experiencia de viaje auténtica, enriquecedora y llena de asombro, te invitamos a unirte a nosotros en una aventura sin igual en las Islas Galápagos. Permitenos ser tus guías mientras descubres la maravilla natural de este paraíso insular. ¡Te esperamos con los brazos abiertos para ofrecerte una experiencia inolvidable en las Islas Galápagos.",
+      "button_text": "Ver más"
+    },
+    "Slider": {
+      "title": "Tours más vendidos"
+    }
+  },
+
+  "aboutUs": {
+    "title": "Sobre nosotros",
+    "text": "Nos complace presentarles a Nazca Travel, un equipo de jóvenes soñadores que se han unido con pasión y determinación para hacer realidad nuestros sueños y los de nuestros clientes. En un mundo lleno de posibilidades y desafíos, hemos decidido dar un paso adelante para ofrecer soluciones innovadoras y creativas en el mundo de las agencias de viajes.",
+    "ourValues": "Nuestros Valores",
+    "responsibility": "Responsabilidad",
+    "responsibility_text": "Responsabilidad",
+    "honesty": "Honestidad",
+    "honesty_text": "Honestidad",
+    "respect": "Respeto",
+    "respect_text": "Respeto",
+    "mission": "Nuestra misión",
+    "mission_text": "Nuestra misión es hacer realidad los sueños de nuestros clientes, ofreciendo servicios de alta calidad y personalizados que inspiren y conecten con la audiencia de manera significativa.",
+    "vision": "Nuestra visión",
+    "vision_text": "En Nazca Travel, nuestra visión es ser un referente en el mundo turistico, destacándonos por nuestra creatividad, innovación y soluciones vanguardistas que generen un impacto positivo en la sociedad.",
+    "contact_us": "Comunicate con nosotros y resolveremos tus dudas",
+    "contact_us_button": "Contactanos"
+  }
+}

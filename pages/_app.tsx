@@ -1,3 +1,5 @@
+import { NextIntlClientProvider } from 'next-intl';
+
 import type { AppProps } from 'next/app';
 import { useEffect } from 'react';
 import '@/styles/global.css';
@@ -10,5 +12,9 @@ export default function App({ Component, pageProps }: AppProps) {
     AOS.init();
   }, []);
 
-  return <Component {...pageProps} />;
+  return (
+    <NextIntlClientProvider messages={pageProps.messages}>
+      <Component {...pageProps} />
+    </NextIntlClientProvider>
+  );
 }
