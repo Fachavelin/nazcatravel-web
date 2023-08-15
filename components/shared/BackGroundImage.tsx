@@ -11,13 +11,7 @@ interface Props {
   isImageAtTop?: boolean;
 }
 
-export const BackGroundImage: FC<Props> = ({
-  imgUrl,
-  imgPosition,
-  text,
-  navButtoms,
-  isImageAtTop = false,
-}) => {
+export const BackGroundImage: FC<Props> = ({ imgUrl, imgPosition, text, navButtoms, isImageAtTop = false }) => {
   return (
     <div
       className={`w-full h-100v max-w-screen-2xl mx-auto  flex items-center justify-center relative
@@ -34,16 +28,10 @@ export const BackGroundImage: FC<Props> = ({
         }}
       />
       <div className='max-w-3xl absolute'>
-        <h1
-          className='text-white text-center text-5xl mb-9'
-          data-aos='fade-down'
-        >
+        <h1 className='text-white text-center text-6xl mb-9' data-aos='fade-down'>
           {text}
         </h1>
-        <div
-          className='flex flex-col sm:flex-row justify-center gap-3'
-          data-aos='fade-up'
-        >
+        <div className='flex flex-col sm:flex-row justify-center gap-3' data-aos='fade-up'>
           {navButtoms &&
             navButtoms.map((item, key) => (
               <Link

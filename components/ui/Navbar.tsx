@@ -1,10 +1,11 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { XMarkIcon, Bars3BottomLeftIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 import { Field, Formik, Form } from 'formik';
 import { Router, useRouter } from 'next/router';
+import Cookies from 'js-cookie';
 
 export const Navbar: FC = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -53,7 +54,9 @@ export const Navbar: FC = () => {
     },
   ];
 
-  console.log(defaultLocale);
+  useEffect(() => {
+    Cookies.set('lang', defaultLocale);
+  }, []);
 
   return (
     <nav className=' w-full bg-white shadow fixed z-50'>
@@ -76,7 +79,7 @@ export const Navbar: FC = () => {
               initialValues={{ locale: defaultLocale }}
               onSubmit={({ locale }) => {
                 router.push(router.asPath, router.asPath, { locale: locale });
-                //router.push(`${locale}${router.asPath}`, `${locale}${router.asPath}`, { locale: false });
+                Cookies.set('lang', locale);
               }}
             >
               {({ handleSubmit, handleChange }) => (
@@ -84,14 +87,14 @@ export const Navbar: FC = () => {
                   <Field
                     as='select'
                     name='locale'
-                    defaultValue={defaultLocale}
                     onChange={(e: any) => {
                       handleChange(e);
                       handleSubmit();
                     }}
+                    className='capitalize cursor-pointer border-2 text-sm font-semibold text-blue-500 hover:text-blue-600 transition ml-2 px-1 py-1 rounded-md'
                   >
                     {locales.map((l) => (
-                      <option key={l.value} value={l.value} className='capitalize'>
+                      <option className='' key={l.value} value={l.value}>
                         {l.name}
                       </option>
                     ))}
