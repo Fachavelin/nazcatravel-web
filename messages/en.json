@@ -51,5 +51,21 @@
     "vision_text": "At Nazca Travel, our vision is to be a benchmark in the tourism industry, standing out for our creativity, innovation, and cutting-edge solutions that generate a positive impact on society.",
     "contact_us": "Contact us and we will resolve your doubts",
     "contact_us_button": "Contact us"
+  },
+
+  "contact": {
+    "title": "Contact Us",
+    "text": "Send us a message, and one of our agents will gladly respond.",
+    "phones": "Phones",
+    "phone": "Phone",
+    "call_us": "Call or write to the numbers:",
+    "address_title": "Address",
+    "find_us": "We are located at the address:",
+    "address": "Av 12 de Febrero y primera",
+    "email": "Email",
+    "contact_us": "Write to the following addresses:",
+    "name": "Name",
+    "message": "Message",
+    "send_message": "Send Message"
   }
 }

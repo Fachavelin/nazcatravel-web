@@ -51,5 +51,21 @@
     "vision_text": "En Nazca Travel, nuestra visión es ser un referente en el mundo turistico, destacándonos por nuestra creatividad, innovación y soluciones vanguardistas que generen un impacto positivo en la sociedad.",
     "contact_us": "Comunicate con nosotros y resolveremos tus dudas",
     "contact_us_button": "Contactanos"
+  },
+
+  "contact": {
+    "title": "Contactanos",
+    "text": "Envianos un mensaje y con gusto uno de nuestros agentes te responderá.",
+    "phones": "Teléfonos",
+    "phone": "Teléfono",
+    "call_us": "LLamanos o escribenos a los numeros:",
+    "address_title": "Dirección",
+    "find_us": "Estamos ubicados en la dirección:",
+    "address": "Av 12 de Febrero y primera",
+    "email": "Correo eletrónico",
+    "contact_us": "Escribenos a las siguientes direcciónes:",
+    "name": "Nombre",
+    "message": "Mensaje",
+    "send_message": "Enviar Mensaje"
   }
 }

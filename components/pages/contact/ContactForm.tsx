@@ -1,4 +1,5 @@
 import { Formik, Form, Field } from 'formik';
+import { useTranslations } from 'next-intl';
 import { FC } from 'react';
 
 interface formValues {
@@ -16,8 +17,10 @@ export const ContactForm: FC = () => {
     message: '',
   };
 
+  const t = useTranslations('contact');
+
   return (
-    <div className='sm:h-80v w-full'>
+    <div className='w-full'>
       <Formik
         initialValues={initialValues}
         onSubmit={() => {
@@ -27,7 +30,7 @@ export const ContactForm: FC = () => {
         <Form>
           <div className='p-6'>
             <div className='grid'>
-              <label>Nombre</label>
+              <label>{t('name')}</label>
               <Field
                 className='border-b-2 bg-slate-100 border-blue-200 focus:border-blue-300 focus:outline-none py-1 px-2 text-gray-800'
                 name='name'
@@ -35,7 +38,7 @@ export const ContactForm: FC = () => {
               />
             </div>
             <div className='grid'>
-              <label>Email</label>
+              <label>{t('email')}</label>
               <Field
                 className='border-b-2 bg-slate-100 border-blue-200 focus:border-blue-300 focus:outline-none py-1 px-2 text-gray-800'
                 name='email'
@@ -43,7 +46,7 @@ export const ContactForm: FC = () => {
               />
             </div>
             <div className='grid'>
-              <label>Teléfono</label>
+              <label>{t('phone')}</label>
               <Field
                 className='border-b-2 bg-slate-100 border-blue-200 focus:border-blue-300 focus:outline-none py-1 px-2 text-gray-800'
                 name='phone'
@@ -51,7 +54,7 @@ export const ContactForm: FC = () => {
               />
             </div>
             <div className='grid'>
-              <label>Mensaje</label>
+              <label>{t('message')}</label>
               <Field
                 className='border-b-2 bg-slate-100 border-blue-200 focus:border-blue-300 focus:outline-none py-1 px-2 text-gray-800'
                 name='message'
@@ -64,7 +67,7 @@ export const ContactForm: FC = () => {
                 type='submit'
                 className='bg-gradient-to-t bg-blue-500 hover:bg-blue-600 hover:shadow-blue-600 shadow-2xl transition py-2 rounded-md text-white font-semibold'
               >
-                Enviar
+                {t('send_message')}
               </button>
             </div>
           </div>

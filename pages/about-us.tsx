@@ -24,7 +24,7 @@ export const AboutUsPage: NextPage = () => {
           <div className='sm:col-span-1'>
             <div className='relative w-full h-96 sm:translate-y-12 sm:shadow-2xl'>
               <Image
-                src={'https://res.cloudinary.com/dbpb5pque/image/upload/v1679343065/computer-2846160_1280_ahjvjs.jpg'}
+                src={'https://res.cloudinary.com/dbpb5pque/image/upload/v1691977141/Nazcatravel/Tours/frigate-bird-891293_1280_gtqrf5.jpg'}
                 alt={''}
                 fill
                 style={{
@@ -86,7 +86,7 @@ export const AboutUsPage: NextPage = () => {
         </div>
 
         <BackGroundImage
-          imgUrl={'https://cdn.pixabay.com/photo/2022/12/06/11/31/trees-7638777_1280.jpg'}
+          imgUrl={'https://res.cloudinary.com/dbpb5pque/image/upload/v1679273034/mountain-7690893_1920_wlvx3a.jpg'}
           text={t('contact_us')}
           imgPosition={'center'}
           navButtoms={navButtoms}

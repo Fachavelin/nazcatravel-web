@@ -54,13 +54,15 @@ export default function Home() {
               <p className='text-justify te xt-xl mb-5 text-gray-800' data-aos='fade-left'>
                 {t('Services.text')}
               </p>
-
-              <button
-                className='w-full bg-blue-500 hover:bg-blue-600 transition hover:shadow-blue-600 shadow-2xl text-white py-2 rounded-lg text-xl'
-                data-aos='fade-right'
-              >
-                {t('Services.button_text')}
-              </button>
+              <div className='flex'>
+                <a
+                  href='/services'
+                  className=' text-center cursor-pointer w-full bg-blue-500 hover:bg-blue-600 transition hover:shadow-blue-600 shadow-2xl text-white py-2 rounded-lg text-xl'
+                  data-aos='fade-right'
+                >
+                  {t('Services.button_text')}
+                </a>
+              </div>
             </div>
           </div>
           <div className=' row-start-1 md:row-auto'>
@@ -101,13 +103,15 @@ export default function Home() {
               <p className='text-justify te xt-xl mb-5 text-gray-800' data-aos='fade-right'>
                 {t('Tours.text')}
               </p>
-
-              <button
-                className='w-full bg-blue-500 hover:bg-blue-600 transition hover:shadow-blue-600 shadow-2xl text-white py-2 rounded-lg text-xl'
-                data-aos='fade-left'
-              >
-                {t('Tours.button_text')}
-              </button>
+              <div className='flex'>
+                <a
+                  href='/tours'
+                  className=' text-center cursor-pointer w-full bg-blue-500 hover:bg-blue-600 transition hover:shadow-blue-600 shadow-2xl text-white py-2 rounded-lg text-xl'
+                  data-aos='fade-right'
+                >
+                  {t('Tours.button_text')}
+                </a>
+              </div>
             </div>
           </div>
         </div>

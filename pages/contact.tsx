@@ -3,42 +3,70 @@ import { ContactForm } from '@/components/pages/contact';
 import { BackGroundImage } from '@/components/shared';
 import { PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/solid';
 import { GetStaticPropsContext, NextPage } from 'next';
+import { useTranslations } from 'next-intl';
+import { useState } from 'react';
 
 const ContactPage: NextPage = () => {
+  const numeros = ['+593 967897586', '+593 989399841'];
+
+  const emails = ['mafer@gmail.com', 'pablo@gmail.com'];
+
+  const t = useTranslations('contact');
+
   return (
-    <Layout title={'Nazca Travel | Contacto'} description={''}>
+    <Layout title={'Nazca Travel | ' + t('title')} description={''}>
       <BackGroundImage
-        imgUrl={'https://cdn.pixabay.com/photo/2015/02/02/11/09/office-620822_1280.jpg'}
-        text={'Contactáctanos'}
+        imgUrl={'https://res.cloudinary.com/dbpb5pque/image/upload/v1691972593/Nazcatravel/Tours/lobo_noche_gn66ip.jpg'}
+        text={t('title')}
         imgPosition={'top'}
-        isImageAtTop
       />
-      <div className='max-w-4xl mx-auto mb-16'>
-        <h1 className='text-2xl text-gray-800 text-center font-semibold py-10 px-4 sm:px-0' data-aos='fade-up'>
-          Envianos un mensaje y con gusto uno de nuestros agentes te responderá
-        </h1>
-        <div className='grid sm:grid-cols-12 border mb-10 mx-4' data-aos='fade-down'>
-          {/* TODO:Contado */}
-          <div className='bg-blue-500 sm:col-span-4 text-white p-6 flex flex-col gap-4'>
-            <p className='text-center text-xl font-semibold'>Información de Contacto</p>
-            <p className='text-center text-sm font-semibold'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-            <div className='flex justify-center items-center gap-2'>
-              <PhoneIcon className='h-5' />
-              <p className='text-center text-sm font-medium'>+593 96 789 7586</p>
-            </div>
-            <div className='flex justify-center items-center gap-2'>
-              <EnvelopeIcon className='h-5' />
-              <p className='text-center text-sm font-medium'>mafer.0199@gmail.com</p>
-            </div>
-            <div className='flex justify-center items-center gap-2'>
-              <MapPinIcon className='h-5' />
-              <p className='text-center text-sm font-medium'>Ciudadela el maestro Km 1/2</p>
-            </div>
-          </div>
-          <div className='sm:col-span-8'>
-            <ContactForm />
-          </div>
+      <div className='grid md:grid-cols-3 max-w-4xl mx-auto mt-10'>
+        <div className='flex flex-col items-center py-4'>
+          <PhoneIcon className='h-6 text-blue-700' />
+          <p className='text-lg font-medium text-blue-700'>{t('phones')}</p>
+          <p>{t('call_us')}</p>
+          <ol>
+            {numeros.map((n) => (
+              <li key={n}>{n}</li>
+            ))}
+          </ol>
         </div>
+        <div className='border-y-2 mx-4 md:mx-0 md:border-y-0 md:border-x-2 border-blue-500 flex flex-col items-center py-4 '>
+          <MapPinIcon className='h-6 text-blue-700' />
+          <p className='text-lg font-medium text-blue-700'>{t('address_title')}</p>
+          <p>{t('find_us')}</p>
+          <p>{t('address')}</p>
+        </div>
+        <div className='flex flex-col items-center py-4'>
+          <EnvelopeIcon className='h-6 text-blue-700' />
+          <p className='text-lg font-medium text-blue-700'>{t('email')}</p>
+          <p>{t('contact_us')}</p>
+          <ol>
+            {emails.map((n) => (
+              <li key={n}>{n}</li>
+            ))}
+          </ol>
+        </div>
+      </div>
+      <div className='max-w-4xl mx-auto'>
+        <h1 className='text-2xl text-gray-800 text-center font-semibold py-10 px-4 sm:px-0' data-aos='fade-up'>
+          {t('text')}
+        </h1>
+        <div className='mx-4 mb-5' data-aos='fade-down'>
+          <ContactForm />
+        </div>
+      </div>
+      <div className='flex justify-center mx-2 text-white' data-aos='fade-down'>
+        <iframe
+          width='1800'
+          height='400'
+          style={{ border: 0 }}
+          loading='lazy'
+          allowFullScreen
+          referrerPolicy='no-referrer-when-downgrade'
+          src='https://www.google.com/maps/embed/v1/place?key=AIzaSyAZaiVYZgI1rdT44_eVyJkDDe7cxymPCls
+    &q=-0.9015997,-89.6108186'
+        ></iframe>
       </div>
     </Layout>
   );
