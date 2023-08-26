@@ -67,5 +67,9 @@
     "name": "Nombre",
     "message": "Mensaje",
     "send_message": "Enviar Mensaje"
+  },
+
+  "tours": {
+    "title": "Nuestros Tours"
   }
 }

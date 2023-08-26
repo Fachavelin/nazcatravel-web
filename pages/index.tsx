@@ -6,6 +6,7 @@ import { nazcaApi } from '@/api';
 import { Layout } from '@/components/layout';
 import { BackGroundImage, BodyCard } from '@/components/shared';
 import { ITour, navButtom } from '@/interfaces';
+import Link from 'next/link';
 
 export default function Home() {
   const t = useTranslations('Index');
@@ -55,13 +56,13 @@ export default function Home() {
                 {t('Services.text')}
               </p>
               <div className='flex'>
-                <a
+                <Link
                   href='/services'
                   className=' text-center cursor-pointer w-full bg-blue-500 hover:bg-blue-600 transition hover:shadow-blue-600 shadow-2xl text-white py-2 rounded-lg text-xl'
                   data-aos='fade-right'
                 >
                   {t('Services.button_text')}
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -104,13 +105,13 @@ export default function Home() {
                 {t('Tours.text')}
               </p>
               <div className='flex'>
-                <a
+                <Link
                   href='/tours'
                   className=' text-center cursor-pointer w-full bg-blue-500 hover:bg-blue-600 transition hover:shadow-blue-600 shadow-2xl text-white py-2 rounded-lg text-xl'
                   data-aos='fade-right'
                 >
                   {t('Tours.button_text')}
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -62,8 +62,14 @@ export const Navbar: FC = () => {
     <nav className=' w-full bg-white shadow fixed z-50'>
       <div className='max-w-7xl mx-auto px-2 sm:px-4 lg:px-8'>
         <div className='flex justify-between h-16'>
-          <div className='flex-shrink-0 flex items-center'>
-            <Image src='/logo.png' alt={''} width={220} height={220} />
+          <div className='flex-shrink-0 flex items-center translate-y-1'>
+            <div className=''>
+              <Image src='/images/logo-bird.png' alt={''} width={90} height={60} />
+            </div>
+            <div>
+              <p className='pl-0 text-3xl  text-blue-500 font-mono font-semibold'>Nazca Travel</p>
+              <p className='-translate-y-2 text-base font-mono font-semibold'>Creando experiencias</p>
+            </div>
           </div>
           <div className='hidden md:ml-6 md:flex md:items-center md:justify-end w-full'>
             {linkValues.map((item) => (
