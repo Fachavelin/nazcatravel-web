@@ -70,6 +70,8 @@
   },
 
   "tours": {
-    "title": "Nuestros Tours"
+    "title": "Nuestros Tours",
+    "subTitle": "Explora nuestros Tours",
+    "button_text": "Ver más"
   }
 }

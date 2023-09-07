@@ -3,7 +3,7 @@ export interface ITour {
   slug: string;
   shortDescription: string;
   body?: string;
-  images?: string[] | string;
+  images?: string[];
   price?: number;
   inStock?: number;
   isVisible?: boolean;

@@ -30,9 +30,8 @@ const ToursPage: NextPage = () => {
         text={'Nuestros Tours'}
         imgPosition='bottom'
       />
-      <div className='max-w-7xl mx-auto grid grid-cols-4'>
-        {tours !== null && tours.map((tour, i) => <TourCard key={i} imageUrl={tour.images ? tour.images[0] : undefined} />)}
-      </div>
+      <p className='text-center text-4xl py-3'>{t('subTitle')}</p>
+      <div className='max-w-7xl mx-auto grid grid-cols-4 pb-4'>{tours !== null && tours.map((tour, i) => <TourCard key={i} tour={tour} />)}</div>
     </Layout>
   );
 };

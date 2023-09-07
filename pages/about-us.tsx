@@ -3,12 +3,13 @@ import { AboutUsCard } from '@/components/pages/aboutUs';
 import { BackGroundImage } from '@/components/shared';
 import { navButtom } from '@/interfaces';
 import { GetStaticPropsContext, NextPage } from 'next';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export const AboutUsPage: NextPage = () => {
   const t = useTranslations('aboutUs');
+  const defaultLocale = useLocale();
 
   const navButtoms: navButtom[] = [
     {
@@ -18,7 +19,7 @@ export const AboutUsPage: NextPage = () => {
   ];
 
   return (
-    <Layout title={'Nazca Travel | Nosotros'} description={''}>
+    <Layout title={`Nazca Travel | ${t('title')}`} description={t('text')} lang={defaultLocale}>
       <div className='min-h-screen'>
         <div className='grid sm:grid-cols-3 max-w-5xl mx-auto pt-12'>
           <div className='sm:col-span-1'>

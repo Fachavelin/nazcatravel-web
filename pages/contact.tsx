@@ -3,10 +3,12 @@ import { ContactForm } from '@/components/pages/contact';
 import { BackGroundImage } from '@/components/shared';
 import { PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/solid';
 import { GetStaticPropsContext, NextPage } from 'next';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { useState } from 'react';
 
 const ContactPage: NextPage = () => {
+  const defaultLocale = useLocale();
+
   const numeros = ['+593 967897586', '+593 989399841'];
 
   const emails = ['mafer@gmail.com', 'pablo@gmail.com'];
@@ -14,7 +16,7 @@ const ContactPage: NextPage = () => {
   const t = useTranslations('contact');
 
   return (
-    <Layout title={'Nazca Travel | ' + t('title')} description={''}>
+    <Layout title={'Nazca Travel | ' + t('title')} description={t('text')} lang={defaultLocale}>
       <BackGroundImage
         imgUrl={'https://res.cloudinary.com/dbpb5pque/image/upload/v1691972593/Nazcatravel/Tours/lobo_noche_gn66ip.jpg'}
         text={t('title')}

@@ -34,7 +34,13 @@ export const Footer: FC = () => {
       <div className='max-w-7xl mx-auto px-2 sm:px-4 lg:px-8 grid gap-5 sm:grid-cols-3'>
         <div className='max-w-xs mx-auto'>
           <div className='flex justify-center pb-4'>
-            <Image src='/logo.png' alt={''} width={220} height={220} />
+            <div className=''>
+              <Image src='/images/logo-bird.png' alt={''} width={90} height={60} />
+            </div>
+            <div className='translate-y-4'>
+              <p className='pl-0 text-3xl  text-white font-mono font-semibold'>Nazca Travel</p>
+              <p className='-translate-y-2 text-base font-mono font-semibold'>Creando experiencias</p>
+            </div>
           </div>
           <p className='text-white text-center pb-4'>{t('slogan')}</p>
           <p className='text-white text-center'>

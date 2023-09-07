@@ -36,7 +36,12 @@ export default function Home() {
   };
 
   return (
-    <Layout title={t('title')} description={t('description')}>
+    <Layout
+      title={t('title')}
+      description={t('description')}
+      imageUrl='https://res.cloudinary.com/dbpb5pque/image/upload/v1692025891/Nazcatravel/Tours/shutterstock_227677294_gurljl.jpg'
+      lang={defaultLocale}
+    >
       <BackGroundImage
         imgUrl={'https://res.cloudinary.com/dbpb5pque/image/upload/v1692025891/Nazcatravel/Tours/shutterstock_227677294_gurljl.jpg'}
         text={t('Hero.text')}

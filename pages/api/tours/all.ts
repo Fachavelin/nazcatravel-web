@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { ITour } from '@/interfaces/tour';
 import { db } from '@/database';
 import { Tour } from '@/models';
+import { ITour } from '@/interfaces';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 type Data = { msg: string } | ITour[];
 
@@ -13,11 +13,11 @@ export default function (req: NextApiRequest, res: NextApiResponse<Data>) {
 }
 
 async function getTours(req: NextApiRequest, res: NextApiResponse<Data>) {
-  const { lang } = req.cookies;
+  console.log('Extrayendo todos los tours');
 
   await db.connect();
   const tours = await Tour.aggregate([
-    { $match: { isVisible: true, lang } }, // Add your conditions here
+    { $match: { isVisible: true } }, // Add your conditions here
     {
       $project: {
         _id: 1,
