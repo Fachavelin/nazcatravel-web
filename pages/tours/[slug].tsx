@@ -2,7 +2,7 @@ import { Layout } from '@/components/layout';
 import { Slider } from '@/components/shared';
 import ReserveTour from '@/components/tour/ReserveTour';
 import { ITour } from '@/interfaces';
-import { GetStaticPaths, GetStaticPathsContext, GetStaticPropsContext, NextPage } from 'next';
+import { GetServerSideProps, GetServerSidePropsContext, GetStaticPaths, GetStaticPathsContext, GetStaticPropsContext, NextPage } from 'next';
 import { FC } from 'react';
 
 interface Props {
@@ -32,8 +32,22 @@ const TourPage: NextPage<Props> = ({ tour }) => {
   );
 };
 
-export const getStaticPaths: GetStaticPaths = async (ctx: GetStaticPathsContext) => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || ''}/api/tours/all`);
+/* export const getStaticPaths: GetStaticPaths = async (ctx: GetStaticPathsContext) => {
+  if (process.env.SKIP_BUILD_STATIC_GENERATION) {
+    return {
+      paths: [],
+      fallback: 'blocking',
+    };
+  }
+
+  const url = `${process.env.NEXT_PUBLIC_API_URL || ''}/api/tours/all`;
+  console.log('Static paths url', url);
+
+  const res = await fetch('http://localhost:3000/api/tours/all');
+
+  if (!res.ok) {
+    console.error(`Failed to fetch data. Status: ${res.status}`);
+  }
 
   const tours: ITour[] = await res.json();
 
@@ -41,9 +55,9 @@ export const getStaticPaths: GetStaticPaths = async (ctx: GetStaticPathsContext)
     paths: tours.map(({ slug }) => ({ params: { slug } })),
     fallback: false,
   };
-};
+}; */
 
-export const getStaticProps = async ({ locale, params }: GetStaticPropsContext) => {
+/* export const getStaticProps = async ({ locale, params }: GetStaticPropsContext) => {
   const { slug = '' } = params as { slug: string };
 
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || ''}/api/tours/${slug}`);
@@ -65,6 +79,37 @@ export const getStaticProps = async ({ locale, params }: GetStaticPropsContext) 
       tour,
     },
     revalidate: 60 * 60 * 3,
+  };
+}; */
+
+/* export const getStaticProps = async ({ locale }: GetStaticPropsContext) => {
+  return {
+    props: {
+      messages: (await import(`@/messages/${locale}.json`)).default,
+    },
+  };
+}; */
+
+export const getServerSideProps: GetServerSideProps = async ({ locale, params }: GetServerSidePropsContext) => {
+  const { slug = '' } = params as { slug: string };
+
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || ''}/api/tours/${slug}`);
+
+  const tour: ITour = await res.json();
+
+  if (!tour) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false,
+      },
+    };
+  }
+  return {
+    props: {
+      messages: (await import(`@/messages/${locale}.json`)).default,
+      tour,
+    },
   };
 };
 
