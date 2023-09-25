@@ -15,9 +15,10 @@ import { EffectCreative, Pagination, Navigation } from 'swiper/modules';
 
 interface Props {
   images?: string[];
+  vh?: string;
 }
 
-export const Slider: FC<Props> = ({ images }) => {
+export const Slider: FC<Props> = ({ images, vh = 'h-80v' }) => {
   return (
     <>
       <Swiper
@@ -43,7 +44,7 @@ export const Slider: FC<Props> = ({ images }) => {
         {images &&
           images.map((image, key) => (
             <SwiperSlide key={key}>
-              <div className='h-80v'>
+              <div className={`${vh}`}>
                 <Image src={image} alt={''} fill style={{ objectFit: 'cover' }} />
               </div>
             </SwiperSlide>

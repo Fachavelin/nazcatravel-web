@@ -32,16 +32,16 @@ const ServicesPage = () => {
         imgPosition='bottom'
       />
       <p className='text-center text-4xl py-3'>{t('subTitle')}</p>
-      <div className='max-w-7xl mx-auto grid'>
+      <div className='max-w-6xl mx-auto grid'>
         {services &&
           services.map((service, key) => (
-            <div key={key} className='p-4 grid grid-cols-5'>
-              <div className='col-span-2'>
-                <Slider images={service.images} />
+            <div key={key} className='grid grid-cols-5 border mb-6 rounded-xl'>
+              <div className='col-span-2 p-6'>
+                <Slider images={service.images} vh='h-50v' />
               </div>
-              <div className='col-span-3'>
+              <div className='col-span-3 p-4'>
                 <p className='text-lg font-semibold'>{service.title}</p>
-                <p className='text-justify'>{service.description}</p>
+                <p className='text-justify my-3'>{service.description}</p>
                 <div className='flex justify-end'>
                   <a
                     className='flex justify-center items-center bg-blue-500 text-white px-2 py-1 rounded-md text-base'
