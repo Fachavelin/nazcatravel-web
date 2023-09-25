@@ -1,10 +1,11 @@
 import { Layout } from '@/components/layout';
 import { ContactForm } from '@/components/pages/contact';
 import { BackGroundImage } from '@/components/shared';
-import { PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/solid';
 import { GetStaticPropsContext, NextPage } from 'next';
 import { useLocale, useTranslations } from 'next-intl';
 import { useState } from 'react';
+
+import { HiPhone, HiMapPin, HiEnvelope } from 'react-icons/hi2';
 
 const ContactPage: NextPage = () => {
   const defaultLocale = useLocale();
@@ -24,7 +25,7 @@ const ContactPage: NextPage = () => {
       />
       <div className='grid md:grid-cols-3 max-w-4xl mx-auto mt-10'>
         <div className='flex flex-col items-center py-4'>
-          <PhoneIcon className='h-6 text-blue-700' />
+          <HiPhone className='h-6 w-6 text-blue-700' />
           <p className='text-lg font-medium text-blue-700'>{t('phones')}</p>
           <p>{t('call_us')}</p>
           <ol>
@@ -34,13 +35,13 @@ const ContactPage: NextPage = () => {
           </ol>
         </div>
         <div className='border-y-2 mx-4 md:mx-0 md:border-y-0 md:border-x-2 border-blue-500 flex flex-col items-center py-4 '>
-          <MapPinIcon className='h-6 text-blue-700' />
+          <HiMapPin className='h-6 w-6 text-blue-700' />
           <p className='text-lg font-medium text-blue-700'>{t('address_title')}</p>
           <p>{t('find_us')}</p>
           <p>{t('address')}</p>
         </div>
         <div className='flex flex-col items-center py-4'>
-          <EnvelopeIcon className='h-6 text-blue-700' />
+          <HiEnvelope className='h-6 w-6 text-blue-700' />
           <p className='text-lg font-medium text-blue-700'>{t('email')}</p>
           <p>{t('contact_us')}</p>
           <ol>
@@ -67,7 +68,7 @@ const ContactPage: NextPage = () => {
           allowFullScreen
           referrerPolicy='no-referrer-when-downgrade'
           src='https://www.google.com/maps/embed/v1/place?key=AIzaSyAZaiVYZgI1rdT44_eVyJkDDe7cxymPCls
-    &q=-0.9015997,-89.6108186'
+    &q=-0.905568, -89.612977'
         ></iframe>
       </div>
     </Layout>

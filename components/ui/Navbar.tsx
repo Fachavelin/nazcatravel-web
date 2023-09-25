@@ -1,11 +1,12 @@
 import { FC, useEffect, useState } from 'react';
-import { XMarkIcon, Bars3BottomLeftIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 import { Field, Formik, Form } from 'formik';
 import { Router, useRouter } from 'next/router';
 import Cookies from 'js-cookie';
+
+import { HiXMark, HiBars3BottomLeft } from 'react-icons/hi2';
 
 export const Navbar: FC = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -119,9 +120,9 @@ export const Navbar: FC = () => {
             >
               <span className='sr-only'>Open main menu</span>
               {isMobileNavOpen ? (
-                <XMarkIcon className='block h-6 w-6' aria-hidden='true' />
+                <HiXMark className='block h-6 w-6' aria-hidden='true' />
               ) : (
-                <Bars3BottomLeftIcon className='block h-6 w-6' aria-hidden='true' />
+                <HiBars3BottomLeft className='block h-6 w-6' aria-hidden='true' />
               )}
             </button>
           </div>

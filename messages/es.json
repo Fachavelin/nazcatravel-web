@@ -72,6 +72,16 @@
   "tours": {
     "title": "Nuestros Tours",
     "subTitle": "Explora nuestros Tours",
-    "button_text": "Ver más"
+    "button_text": "Ver más",
+    "more": "Más información",
+    "text_message": "Hola, me gustaría tener mas información sobre: "
+  },
+
+  "services": {
+    "title": "Nuestros servicios",
+    "subTitle": "Explora nuestros servicios",
+    "button_text": "Ver más",
+    "more": "Más información",
+    "text_message": "Hola, me gustaría tener mas información sobre: "
   }
 }

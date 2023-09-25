@@ -24,14 +24,16 @@ const ToursPage: NextPage = () => {
   };
 
   return (
-    <Layout title={'Nazca Travel | Tours'} description={''}>
+    <Layout title={`Nazca Travel | ${t('title')}`} description={''}>
       <BackGroundImage
         imgUrl={'https://res.cloudinary.com/dbpb5pque/image/upload/v1692025889/Nazcatravel/Tours/shutterstock_131878043_r3h56j.jpg'}
-        text={'Nuestros Tours'}
+        text={t('title')}
         imgPosition='bottom'
       />
       <p className='text-center text-4xl py-3'>{t('subTitle')}</p>
-      <div className='max-w-7xl mx-auto grid grid-cols-4 pb-4'>{tours !== null && tours.map((tour, i) => <TourCard key={i} tour={tour} />)}</div>
+      <div className='max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 pb-4'>
+        {tours !== null && tours.map((tour, i) => <TourCard key={i} tour={tour} />)}
+      </div>
     </Layout>
   );
 };

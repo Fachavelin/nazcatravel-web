@@ -67,5 +67,21 @@
     "name": "Name",
     "message": "Message",
     "send_message": "Send Message"
+  },
+
+  "tours": {
+    "title": "Our Tours",
+    "subTitle": "Explore our Tours",
+    "button_text": "See more",
+    "more": "More information",
+    "text_message": "Hello, I would like to have more information about: "
+  },
+
+  "services": {
+    "title": "Our Tours",
+    "subTitle": "Explore our Tours",
+    "button_text": "See more",
+    "more": "More information",
+    "text_message": "Hello, I would like to have more information about: "
   }
 }
