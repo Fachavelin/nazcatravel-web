@@ -22,13 +22,13 @@
     },
     "Services": {
       "title": "Discover Our Services",
-      "text": "At our agency, we take pride in offering unforgettable and personalized experiences for all travelers who wish to explore and discover the incredible biodiversity and natural beauty of the Galapagos Islands. Our goal is to provide exceptional service and turn each trip into a unique and exciting adventure.",
-      "button_text": "Learn more"
+      "text": "In our agency, we take pride in offering unforgettable and personalized experiences for all travelers who wish to explore and discover the incredible biodiversity and natural beauty of the Galápagos Islands. Our goal is to provide exceptional service and turn each trip into a unique and thrilling adventure.",
+      "button_text": "Learn More"
     },
     "Tours": {
       "title": "Explore Our Tours",
-      "text": "If you seek an authentic, enriching, and awe-inspiring travel experience, we invite you to join us on an unparalleled adventure in the Galapagos Islands. Let us be your guides as you discover the natural wonder of this island paradise. We welcome you with open arms to offer you an unforgettable experience in the Galapagos Islands.",
-      "button_text": "Learn more"
+      "text": "If you're looking for an authentic, enriching, and awe-inspiring travel experience, we invite you to join us on an unparalleled adventure in the Galápagos Islands. Let us be your guides as you discover the natural wonder of this island paradise. We await you with open arms to offer an unforgettable experience!",
+      "button_text": "Learn More"
     },
     "Slider": {
       "title": "Top Selling Tours"
@@ -37,7 +37,7 @@
 
   "aboutUs": {
     "title": "About Us",
-    "text": "We are pleased to introduce Nazca Travel, a team of young dreamers who have come together with passion and determination to make our dreams and those of our clients come true. In a world full of possibilities and challenges, we have decided to take a step forward to offer innovative and creative solutions in the world of travel agencies.",
+    "text": "Nazca Travel is a team of young dreamers who have come together with passion and determination to make their dreams and those of their clients come true. In a world full of possibilities and challenges, we have decided to take a step forward to offer personalized and creative services in the world of travel agencies.",
     "ourValues": "Our Values",
     "responsibility": "Responsibility",
     "responsibility_text": "Responsibility",
