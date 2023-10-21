@@ -50,15 +50,13 @@ const TourPage: NextPage<Props> = ({ tour }) => {
   return (
     <Layout title={tour.title} description={tour.shortDescription}>
       <div className='max-w-screen-2xl mx-auto min-h-screen mt-16'>
-        <div className='grid'>
-          {/* Slider */}
-          <div className='md:relative'>
-            {/* <Slider images={tour.images} /> */}
-            <SliderCoverFlow />
+        <div className='grid grid-cols-5'>
+          <div className='md:relative col-span-3'>
+            <Slider images={tour.images} />
+            {/* <SliderCoverFlow /> */}
             {/* <ReserveTour tour={tour} /> */}
           </div>
-          {/* El resto */}
-          <div className='pt-4 mb-7'>
+          <div className='pt-4 mb-7 col-span-2'>
             <p className='text-center text-xl font-semibold py-2'>{tour.title}</p>
             <div style={listStyle} dangerouslySetInnerHTML={{ __html: tour.body || '' }} />
             {/* {parse(tour.body || '', options)} */}
