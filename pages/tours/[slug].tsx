@@ -9,6 +9,7 @@ import parse from 'html-react-parser';
 import { useTranslations } from 'next-intl';
 
 import { FaWhatsapp } from 'react-icons/fa6';
+import { SliderCoverFlow } from '@/components/shared/SliderCoverFlow';
 
 interface Props {
   tour: ITour;
@@ -49,14 +50,15 @@ const TourPage: NextPage<Props> = ({ tour }) => {
   return (
     <Layout title={tour.title} description={tour.shortDescription}>
       <div className='max-w-screen-2xl mx-auto min-h-screen mt-16'>
-        <div className='grid md:grid-cols-5'>
+        <div className='grid'>
           {/* Slider */}
-          <div className='md:col-span-3 md:relative'>
-            <Slider images={tour.images} />
+          <div className='md:relative'>
+            {/* <Slider images={tour.images} /> */}
+            <SliderCoverFlow />
             {/* <ReserveTour tour={tour} /> */}
           </div>
           {/* El resto */}
-          <div className='md:col-span-2 pt-4 mb-7'>
+          <div className='pt-4 mb-7'>
             <p className='text-center text-xl font-semibold py-2'>{tour.title}</p>
             <div style={listStyle} dangerouslySetInnerHTML={{ __html: tour.body || '' }} />
             {/* {parse(tour.body || '', options)} */}

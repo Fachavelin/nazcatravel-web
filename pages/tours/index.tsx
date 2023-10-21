@@ -31,7 +31,7 @@ const ToursPage: NextPage = () => {
         imgPosition='bottom'
       />
       <p className='text-center text-4xl py-3'>{t('subTitle')}</p>
-      <div className='max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 pb-4'>
+      <div className='max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 pb-4 gap-4'>
         {tours !== null && tours.map((tour, i) => <TourCard key={i} tour={tour} />)}
       </div>
     </Layout>

@@ -20,9 +20,7 @@ export const TourCard: FC<props> = ({ tour }) => {
       <p className='font-bold text-xl'>{tour.title}</p>
       <p className=''>{truncate(tour.shortDescription, { length: 100 })}</p>
       <div className='flex justify-between items-center'>
-        <p className='text-left font-bold'>
-          $<span className='font-semibold'> {tour.price}</span>
-        </p>
+        <p className='text-left font-bold'>{/* $<span className='font-semibold'> {tour.price}</span> */}</p>
         <Link className='bg-blue-500 px-2 py-1 text-white rounded-md' href={`/tours/${tour.slug}`}>
           {t('button_text')}
         </Link>
