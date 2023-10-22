@@ -19,12 +19,10 @@ import { EffectCreative, Pagination, Navigation, Thumbs, FreeMode } from 'swiper
 
 interface Props {
   images?: string[];
-  vh?: string;
+  style?: string;
 }
 
-export const Slider: FC<Props> = ({ images, vh = 'h-70v' }) => {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
+export const Slider: FC<Props> = ({ images, style = '' }) => {
   return (
     <>
       <Swiper
@@ -34,26 +32,16 @@ export const Slider: FC<Props> = ({ images, vh = 'h-70v' }) => {
         }}
         navigation={true}
         effect={'creative'}
-        creativeEffect={{
-          prev: {
-            shadow: true,
-            translate: ['-120%', 0, -500],
-          },
-          next: {
-            shadow: true,
-            translate: ['120%', 0, -500],
-          },
-        }}
-        thumbs={{ swiper: thumbsSwiper }}
-        modules={[EffectCreative, Pagination, Navigation, Thumbs]}
-        className='mySwiper2'
+        modules={[Pagination, Navigation]}
+        className={`w-full ${style}`}
       >
         {images &&
           images.map((image, key) => (
-            <SwiperSlide key={key}>
-              <div className={`${vh}`}>
+            <SwiperSlide key={key} className='text-center text-18 bg-white flex justify-center items-center'>
+              {/* <div className={`${vh}`}>
                 <Image src={image} alt={''} fill style={{ objectFit: 'cover' }} />
-              </div>
+              </div> */}
+              <img src={image} className='block w-full h-full object-cover' />
             </SwiperSlide>
           ))}
       </Swiper>

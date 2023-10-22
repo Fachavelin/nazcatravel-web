@@ -36,21 +36,21 @@
   },
 
   "aboutUs": {
-    "title": "About Us",
-    "text": "Nazca Travel is a team of young dreamers who have come together with passion and determination to make their dreams and those of their clients come true. In a world full of possibilities and challenges, we have decided to take a step forward to offer personalized and creative services in the world of travel agencies.",
-    "ourValues": "Our Values",
-    "responsibility": "Responsibility",
-    "responsibility_text": "Responsibility",
-    "honesty": "Honesty",
-    "honesty_text": "Honesty",
-    "respect": "Respect",
-    "respect_text": "Respect",
-    "mission": "Our Mission",
-    "mission_text": "To make our clients' dreams come true, offering quality and personalized services that inspire and connect with the audience in a meaningful way.",
-    "vision": "Our Vision",
-    "vision_text": "To be a benchmark in the tourism world, standing out for our creativity, innovation, and avant-garde solutions that generate a positive impact on society.",
-    "contact_us": "Get in touch with us and we will resolve your doubts",
-    "contact_us_button": "Contact Us"
+    "title": "Acerca de Nosotros",
+    "text": "Nazca Travel es un equipo de jóvenes soñadores que se han unido con pasión y determinación para hacer realidad sus sueños y los de sus clientes. En un mundo lleno de posibilidades y desafíos, hemos decidido dar un paso adelante para ofrecer servicios personalizados y creativos en el mundo de las agencias de viajes.",
+    "ourValues": "Nuestros Valores",
+    "responsibility": "Responsabilidad",
+    "responsibility_text": "Responsabilidad",
+    "honesty": "Honestidad",
+    "honesty_text": "Honestidad",
+    "respect": "Respeto",
+    "respect_text": "Respeto",
+    "mission": "Nuestra Misión",
+    "mission_text": "Nuestra misión es hacer realidad los sueños de nuestros clientes ofreciendo servicios de alta calidad y personalizados que inspiren y conecten con la audiencia de una manera significativa.",
+    "vision": "Nuestra Visión",
+    "vision_text": "En Nazca Travel, nuestra visión es ser un referente en la industria del turismo, destacando por nuestra creatividad, innovación y soluciones de vanguardia que generen un impacto positivo en la sociedad.",
+    "contact_us": "Contáctanos y resolveremos tus dudas",
+    "contact_us_button": "Contáctanos"
   },
 
   "contact": {

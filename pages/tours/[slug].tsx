@@ -50,24 +50,22 @@ const TourPage: NextPage<Props> = ({ tour }) => {
   return (
     <Layout title={tour.title} description={tour.shortDescription}>
       <div className='max-w-screen-2xl mx-auto min-h-screen mt-16'>
-        <div className='grid grid-cols-5'>
-          <div className='md:relative col-span-3'>
-            <Slider images={tour.images} />
-            {/* <SliderCoverFlow /> */}
-            {/* <ReserveTour tour={tour} /> */}
+        <div className='grid md:grid-cols-2'>
+          <div className='max-w-[100vw]'>
+            <Slider images={tour.images} style='h-[50vh] md:h-[90vh]' />
           </div>
-          <div className='pt-4 mb-7 col-span-2'>
+          <div className='pt-4 mb-7  mx-4'>
             <p className='text-center text-xl font-semibold py-2'>{tour.title}</p>
             <div style={listStyle} dangerouslySetInnerHTML={{ __html: tour.body || '' }} />
             {/* {parse(tour.body || '', options)} */}
-            <div className='flex justify-center'>
+            <div className='flex justify-center md:justify-end pt-5'>
               <a
                 className='flex justify-center items-center bg-blue-500 text-white px-2 py-1 rounded-md text-lg'
                 href={`https://api.whatsapp.com/send?phone=593989399841&text=${t('text_message')}${tour.title}`}
                 target='_blank'
               >
                 {t('more')}
-                <FaWhatsapp className='ml-3 h-7 w-7' />
+                <FaWhatsapp className='ml-3 h-6 w-7' />
               </a>
             </div>
           </div>

@@ -35,13 +35,13 @@ const ServicesPage = () => {
       <div className='max-w-6xl mx-auto grid'>
         {services &&
           services.map((service, key) => (
-            <div key={key} className='grid grid-cols-5 border mb-6 rounded-xl'>
-              <div className='col-span-2 p-6'>
-                <Slider images={service.images} vh='h-50v' />
+            <div key={key} className='grid md:grid-cols-5 border mb-6 rounded-xl'>
+              <div className='md:col-span-2 p-6 max-w-[100vw]'>
+                <Slider images={service.images} style='h-[40vh]' />
               </div>
-              <div className='col-span-3 p-4'>
+              <div className='md:col-span-3 p-4'>
                 <p className='text-lg font-semibold'>{service.title}</p>
-                <p className='text-justify my-3'>{service.description}</p>
+                <p className='text-justify my-3 mx-5 md:mx-0'>{service.description}</p>
                 <div className='flex justify-end'>
                   <a
                     className='flex justify-center items-center bg-blue-500 text-white px-2 py-1 rounded-md text-base'
