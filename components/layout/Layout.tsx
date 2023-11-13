@@ -2,6 +2,7 @@ import { FC, ReactNode } from 'react';
 import Head from 'next/head';
 import { Navbar } from '../ui';
 import { Footer } from '../ui/Footer';
+import { Whatsapp } from '../ui/Whatsapp';
 
 interface Props {
   title: string;
@@ -37,6 +38,7 @@ export const Layout: FC<Props> = ({ title, description, children, imageUrl, lang
       </Head>
       <Navbar />
       <main className='overflow-x-hidden overflow-y-hidden'>{children}</main>
+      <Whatsapp />
       <Footer />
     </>
   );

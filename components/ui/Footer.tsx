@@ -68,7 +68,7 @@ export const Footer: FC = () => {
 
           <a
             className='text-sm font-semibold text-white hover:text-blue-100 cursor-pointer transition mx-auto'
-            href='https://www.facebook.com/mafercita.arevalo'
+            href='https://www.facebook.com/profile.php?id=100090497421223'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -76,7 +76,7 @@ export const Footer: FC = () => {
           </a>
           <a
             className='text-sm font-semibold text-white hover:text-blue-100 cursor-pointer transition mx-auto'
-            href='https://www.facebook.com/mafercita.arevalo'
+            href='https://www.instagram.com/nazcatravel/'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -84,11 +84,11 @@ export const Footer: FC = () => {
           </a>
           <a
             className='text-sm font-semibold text-white hover:text-blue-100 cursor-pointer transition mx-auto'
-            href='https://www.facebook.com/mafercita.arevalo'
+            href='https://www.tiktok.com/@nazca.travel'
             target='_blank'
             rel='noopener noreferrer'
           >
-            Twitter
+            Tik Tok
           </a>
         </div>
       </div>
